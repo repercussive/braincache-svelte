@@ -1,2 +1,5 @@
-<h1>Hello world!</h1>
-<p>This is my cool svelte app. 😎</p>
+<script>
+  import WelcomeScreen from "$components/screens/WelcomeScreen.svelte"
+</script>
+
+<WelcomeScreen />
