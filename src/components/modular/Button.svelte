@@ -1,4 +1,4 @@
-<button>
+<button on:click>
   <span class="front">
     <slot />
   </span>
