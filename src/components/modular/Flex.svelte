@@ -40,7 +40,7 @@
 {/if}
 
 <style lang="scss">
-  div {
+  div, span {
     display: flex;
     justify-content: var(--justify);
     align-items: var(--align);
