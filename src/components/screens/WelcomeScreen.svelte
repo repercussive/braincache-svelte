@@ -6,6 +6,9 @@
   import ViewportCentered from '$components/modular/ViewportCentered.svelte'
   import MainHeading from '$components/screens/welcome/MainHeading.svelte'
   import Rules from '$components/screens/welcome/Rules.svelte'
+  import screen from '$logic/app/appScreen'
+
+  let count = 0
 </script>
 
 <ViewportCentered>
@@ -17,5 +20,5 @@
   <Spacer mb={8} />
   <Rules />
   <Spacer mb={12} />
-  <Button>Start</Button>
+  <Button on:click={() => screen.set('game')}>Start</Button>
 </ViewportCentered>

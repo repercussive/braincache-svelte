@@ -29,8 +29,7 @@
     direction += '-reverse'
   }
 
-  let allStyles =
-    `--direction:${direction};--align:${align};--justify:${justify};` + style
+  $: allStyles = `--direction:${direction};--align:${align};--justify:${justify};` + style
 </script>
 
 {#if asSpan}
@@ -40,7 +39,8 @@
 {/if}
 
 <style lang="scss">
-  div, span {
+  div,
+  span {
     display: flex;
     justify-content: var(--justify);
     align-items: var(--align);
