@@ -37,7 +37,7 @@
 
     &:hover,
     &:active {
-      border-color: var(--color-button-border-highlight);
+      --color-button-border: var(--color-button-border-highlight);
     }
 
     &:active {
