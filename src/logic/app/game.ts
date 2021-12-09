@@ -61,7 +61,7 @@ const createGame = () => {
   initializeWords()
 
   return {
-    subscribe, set, update, reset,
+    subscribe, reset,
 
     generateLevel: () => {
       update((game) => {
