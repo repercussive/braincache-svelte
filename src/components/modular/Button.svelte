@@ -18,7 +18,7 @@
     font-family: inherit;
     font-weight: 450;
     line-height: 1rem;
-    transition: all 70ms;
+    transition: all 100ms;
 
     .front {
       display: flex;
@@ -32,7 +32,7 @@
       border: solid 2px var(--color-button-border);
       background-color: var(--color-button-bg);
       transform: translateY(-3px);
-      transition: all 70ms;
+      transition: all 100ms;
     }
 
     &:hover,
