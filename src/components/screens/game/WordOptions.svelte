@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import game from '$logic/app/game'
+  import appScreen from '$logic/app/appScreen'
   import sleep from '$logic/util/sleep'
   import WordButton from '$components/screens/game/WordButton.svelte'
   import Flex from '$components/modular/Flex.svelte'
@@ -33,8 +34,12 @@
     animation = 'exit'
     await sleep(400)
 
-    game.generateLevel()
-    animation = 'enter'
+    if (game.checkHasGameEnded()) {
+      appScreen.set('game-end')
+    } else {
+      game.generateLevel()
+      animation = 'enter'
+    }
   }
 
   function getButtonVariant(word: string) {

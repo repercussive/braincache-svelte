@@ -1,7 +1,8 @@
 <script lang="ts">
+  import appScreen, { AppScreen } from '$logic/app/appScreen'
   import WelcomeScreen from '$components/screens/WelcomeScreen.svelte'
   import GameScreen from '$components/screens/GameScreen.svelte'
-  import appScreen, { AppScreen } from '$logic/app/appScreen'
+  import EndScreen from '$components/screens/EndScreen.svelte'
 
   $: component = getScreen($appScreen)
 
@@ -11,8 +12,8 @@
         return WelcomeScreen
       case 'game':
         return GameScreen
-      default:
-        return WelcomeScreen
+      case 'game-end':
+        return EndScreen
     }
   }
 </script>

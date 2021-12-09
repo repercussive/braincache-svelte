@@ -1,5 +1,6 @@
 import { writable, get } from 'svelte/store'
 import allWords from '$assets/words'
+import highScoreHandler from '$logic/app/highScoreHandler'
 import getRandomArrayItem from '$logic/util/getRandomArrayItem'
 import shuffleArray from '$logic/util/shuffleArray'
 
@@ -50,6 +51,7 @@ const createGame = () => {
 
   const handleGameEnd = () => update((game) => {
     game.status = 'ended'
+    highScoreHandler.setMostRecentScore(game.score)
     return game
   })
 
