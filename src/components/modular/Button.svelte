@@ -4,7 +4,7 @@
   </span>
 </button>
 
-<style lang="scss">
+<style lang="scss" global>
   button {
     cursor: pointer;
     user-select: none;
