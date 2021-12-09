@@ -6,12 +6,11 @@
 
   const convert = (value: number) => `${value * 0.125}rem`
 
-  const style = `
-    margin-top:${convert(mt)};
-    margin-right:${convert(mr)};
-    margin-bottom:${convert(mb)};
-    margin-left:${convert(ml)};
-  `
+  let style = ''
+  if (mt) style += `margin-top:${convert(mt)};`
+  if (mr) style += `margin-right:${convert(mr)};`
+  if (mb) style += `margin-bottom:${convert(mb)};`
+  if (ml) style += `margin-left:${convert(ml)};`
 </script>
 
 <div {style}><slot /></div>
