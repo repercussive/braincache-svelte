@@ -19,6 +19,7 @@
     font-weight: 450;
     line-height: 1rem;
     transition: all 100ms;
+    -webkit-tap-highlight-color: transparent;
 
     .front {
       display: flex;
@@ -35,11 +36,6 @@
       transition: all 100ms;
     }
 
-    &:hover,
-    &:active {
-      --color-button-border: var(--color-button-border-highlight);
-    }
-
     &:active {
       top: 3px;
       .front {
@@ -49,6 +45,15 @@
 
     &:disabled {
       pointer-events: none;
+    }
+
+    &:not(:disabled) {
+      &:active,
+      &:hover {
+        @media (hover: hover) {
+          --color-button-border: var(--color-button-border-highlight);
+        }
+      }
     }
   }
 </style>
