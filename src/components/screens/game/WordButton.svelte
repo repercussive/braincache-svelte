@@ -5,7 +5,7 @@
   export let variant: 'correct' | 'incorrect' | 'missed' | 'empty' | null = null
 
   $: className = generateClass(animation, variant)
-  $: disabled = $game.status !== 'waiting'
+  $: disabled = $game.status !== 'waiting' || variant === 'empty'
 
   function generateClass(animation: string, variant: string) {
     let className = `word-button animation-${animation}`
