@@ -5,7 +5,7 @@
   import Icon from '$components/modular/Icon.svelte'
   import game from '$logic/app/game'
 
-  $: lives = Array.from({ length: 3 }).map((_, index) => {
+  $: livesData = Array.from({ length: 3 }).map((_, index) => {
     const isActive = $game.lives > index
     return {
       animation: isActive ? 'none' : 'lose-life forwards 400ms',
@@ -14,13 +14,13 @@
 </script>
 
 <Flex>
-  {#each lives as { animation }}
+  {#each livesData as { animation }}
     <div class="container">
       <Icon
         icon={HeartIcon}
         color="life"
         size={1.65}
-        style={`position: absolute; animation:${animation};`}
+        style={`position: absolute; animation: ${animation};`}
       />
       <Icon
         icon={HeartIcon}
