@@ -1,7 +1,7 @@
 <script>
   import screen from '$logic/app/appScreen'
   import highScoreHandler from '$logic/app/highScoreHandler'
-  import ScoreDisplay from '$components/modular/ScoreDisplay.svelte'
+  import LabelledScore from '$components/modular/LabelledScore.svelte'
   import StyledContainer from '$components/modular/StyledContainer.svelte'
   import Spacer from '$components/modular/Spacer.svelte'
   import Button from '$components/modular/Button.svelte'
@@ -17,7 +17,7 @@
     <Spacer mb={8} />
     <StyledContainer>How many words can you hold in your head?</StyledContainer>
     <Spacer mb={8} />
-    <ScoreDisplay label="Your best score:" score={highScoreHandler.highScore} />
+    <LabelledScore label="Your best score:" score={highScoreHandler.highScore} />
     <Spacer mb={8} />
     <Rules />
     <Spacer mb={12} />

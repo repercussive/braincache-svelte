@@ -2,7 +2,7 @@
   import appScreen, { AppScreen } from '$logic/app/appScreen'
   import highScoreHandler from '$logic/app/highScoreHandler'
   import game from '$logic/app/game'
-  import ScoreDisplay from '$components/modular/ScoreDisplay.svelte'
+  import LabelledScore from '$components/modular/LabelledScore.svelte'
   import Spacer from '$components/modular/Spacer.svelte'
   import StyledContainer from '$components/modular/StyledContainer.svelte'
   import ViewportCentered from '$components/modular/ViewportCentered.svelte'
@@ -26,7 +26,7 @@
       <p>That's a wrap!</p>
     </StyledContainer>
     <Spacer mb={12} />
-    <ScoreDisplay
+    <LabelledScore
       label={isHighScore ? 'High score!' : 'Your score:'}
       score={mostRecentScore}
     />
