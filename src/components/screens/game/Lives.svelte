@@ -1,7 +1,6 @@
 <script>
   import HeartIcon from '$components/icons/HeartIcon.svelte'
   import Flex from '$components/modular/Flex.svelte'
-
   import Icon from '$components/modular/Icon.svelte'
   import game from '$logic/app/game'
 
